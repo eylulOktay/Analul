@@ -41,11 +41,75 @@
         <img class="img" src="aepics/ae19.jpg"></img>
         <img class="img" src="aepics/ae20.jpg"></img>
 
+        <div class="comment">
+            <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on our pics......"></textarea>
+            <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+            </div>
+            <div id="display">
+
+        </div>
+        
+        <script type="text/javascript">
+            var titles = [];
+            var titleInput = document.getElementById("title");
+            var messageBox = document.getElementById("display");
+            
+            function Allow(){
+                if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+            
+                {
+                user.title.value="";
+                alert("Please Enter only alphabets");
+                }
+                window.location.reload()
+                }
+            function insert () {
+            titles.push(titleInput.value);
+            clearAndShow();
+            }
+            function clearAndShow ()
+            {
+            titleInput.value = "";
+            messageBox.innerHTML = "";
+            messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+            }
+        </script>
+        
         <h1 class="center-align blue lighten-2 white-text">Anagha!</h1>
         <img class="img1" src="aepics/an1.jpg"></img>
         <img class="img1" src="aepics/an2.jpg"></img>
         <img class="img1" src="aepics/an3.jpg"></img>
         <img class="img1" src="aepics/an4.jpg"></img>
+
+        <div class="comment">
+            <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Anagha's pics......"></textarea>
+            <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+            </div>
+            <div id="display"></div>
+            <script type="text/javascript">
+            var titles = [];
+            var titleInput = document.getElementById("title");
+            var messageBox = document.getElementById("display");
+            function Allow()
+            {
+            if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+            {
+            user.title.value="";
+            alert("Please Enter only alphabets");
+            }
+            window.location.reload()
+            }
+            function insert () {
+            titles.push(titleInput.value);
+            clearAndShow();
+            }
+            function clearAndShow ()
+            {
+            titleInput.value = "";
+            messageBox.innerHTML = "";
+            messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+            }
+        </script>
  
 
         <h1 class="center-align blue lighten-2 white-text">Eylul!</h1>
@@ -53,10 +117,39 @@
         <img class="img1" src="aepics/e3.jpg"></img>
         <img class="img1" src="aepics/e4.jpg"></img>
         <img class="img1" src="aepics/e5.jpg"></img>   
+
+    <div class="comment">
+        <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Eylul's pics......"></textarea>
+        <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+        </div>
+        <div id="display"></div>
+        <script type="text/javascript">
+        var titles = [];
+        var titleInput = document.getElementById("title");
+        var messageBox = document.getElementById("display");
+        function Allow()
+        {
+        if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+        {
+        user.title.value="";
+        alert("Please Enter only alphabets");
+        }
+        window.location.reload()
+        }
+        function insert () {
+        titles.push(titleInput.value);
+        clearAndShow();
+        }
+        function clearAndShow ()
+        {
+        titleInput.value = "";
+        messageBox.innerHTML = "";
+        messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+        }
+        </script>
     </div>
 
     <p style="background-image: url('aepics/aebackground.jpeg');"></p>
-
 
 
 </body>
