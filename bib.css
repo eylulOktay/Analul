@@ -96,3 +96,7 @@ body {
     font-style: bold;
     font-size: 25px;
   }
+
+  .title {
+    border-radius: 10px;
+  }
