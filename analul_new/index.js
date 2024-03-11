@@ -1,17 +1,17 @@
 const express = require("express");
 const app = express();
-const db = require("./db/db_connection");
+const db = require("./db_connection");
 const port = 3000;
 
-app.set("views", __dirname + "/views");
+app.set("views", __dirname);
 app.set("view engine", "ejs");
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname));
 
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("picpage");
 });
 
 const comment_sql = `
@@ -35,3 +35,8 @@ app.get("/assignments/:id", (req, res) => {
         }
     );
 });
+
+// start the server
+app.listen( port, () => {
+    console.log(`App server listening on ${ port }. (Go to http://localhost:${ port })` );
+} );
