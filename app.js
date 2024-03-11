@@ -18,8 +18,8 @@ const comment_sql = `
     SELECT photo_id, 
     FROM photo
     JOIN comment 
-    ON 
-        photo.photo_id = comment.phot_id
+    ON  
+        photo.photo_id = comment.photo_id
 `;
 
 app.get("/assignments/:id", (req, res) => {
