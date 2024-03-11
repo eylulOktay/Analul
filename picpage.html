@@ -98,16 +98,18 @@
         <br>
         <div class="comment">
             <br>
-            <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Anagha's pics......"></textarea>
+            <textarea id="title1" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Anagha's pics......"></textarea>
             <br>
             <br>
-            <input class = "post" type="submit" value="Post" onclick="insert()" style="width:100px;" /></form>
-            </div>
-            <div id="display"></div>
+            <input class = "post" type="submit" value="Post" onclick="insert1()" style="width:100px;" /></form>
+
+            <div id="display1"></div>
+        </div>
+
             <script type="text/javascript">
-            var titles = [];
-            var titleInput = document.getElementById("title");
-            var messageBox = document.getElementById("display");
+            var titles1 = [];
+            var titleInput1 = document.getElementById("title1");
+            var messageBox1 = document.getElementById("display1");
             function Allow()
             {
             if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
@@ -117,15 +119,15 @@
             }
             window.location.reload()
             }
-            function insert () {
-            titles.push(titleInput.value);
-            clearAndShow();
+            function insert1 () {
+            titles1.push(titleInput1.value);
+            clearAndShow1();
             }
-            function clearAndShow ()
+            function clearAndShow1 ()
             {
-            titleInput.value = "";
-            messageBox.innerHTML = "";
-            messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+            titleInput1.value = "";
+            messageBox1.innerHTML = "";
+            messageBox1.innerHTML += " " + titles1.join("<br/> ") + "<br/>";
             }
         </script>
  
@@ -139,16 +141,16 @@
     <br>
     <div class="comment">
         <br>
-        <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Eylul's pics......"></textarea>
+        <textarea id="title2" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Eylul's pics......"></textarea>
         <br>
         <br>
-        <input class = "post" type="submit" value="Post" onclick="insert()" style="width:100px;" /></form>
+        <input class = "post" type="submit" value="Post" onclick="insert2()" style="width:100px;" /></form>
+        <div id="display2"></div>
         </div>
-        <div id="display"></div>
         <script type="text/javascript">
-        var titles = [];
-        var titleInput = document.getElementById("title");
-        var messageBox = document.getElementById("display");
+        var titles2 = [];
+        var titleInput2 = document.getElementById("title2");
+        var messageBox2 = document.getElementById("display2");
         function Allow()
         {
         if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
@@ -158,15 +160,15 @@
         }
         window.location.reload()
         }
-        function insert () {
-        titles.push(titleInput.value);
-        clearAndShow();
+        function insert2 () {
+        titles2.push(titleInput2.value);
+        clearAndShow2();
         }
-        function clearAndShow ()
+        function clearAndShow2 ()
         {
-        titleInput.value = "";
-        messageBox.innerHTML = "";
-        messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+        titleInput2.value = "";
+        messageBox2.innerHTML = "";
+        messageBox2.innerHTML += " " + titles2.join("<br/> ") + "<br/>";
         }
         </script>
     </div>

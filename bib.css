@@ -100,3 +100,8 @@ body {
   .title {
     border-radius: 10px;
   }
+
+  .comment {
+    border: 5px;
+    border-color: #fb9242;
+  }
