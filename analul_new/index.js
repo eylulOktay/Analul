@@ -21,6 +21,7 @@ const getAllPhotos = `SELECT * FROM photo`;
 
 
 app.get("/picpage", (req, res) => {
+    var photos;
     db.execute(getAllPhotos, (err, results) => {
             let data = { photoList : results };
             console.log(data);
@@ -47,3 +48,21 @@ app.post("/picpage", (req, res) => {
 app.listen( port, () => {
     console.log(`App server listening on ${ port }. (Go to http://localhost:${ port })` );
 } );
+
+app.get("/login", (req, res) => {
+    res.render('login');
+})
+
+const createUser = `
+
+SELECT count(*)
+FROM user
+WHERE username = ? and password = ?
+`
+
+app.post("/login", (req, res) => {
+    db.execute(createUser, [req.body.username, req.body.password], (err, results) => {
+        console.log(results);
+        res.redirect(`/picpage`);
+    } );
+})
