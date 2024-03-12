@@ -11,6 +11,10 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
+    res.render("login");
+});
+
+app.get("/aeweb", (req, res) => {
     res.render("aeweb");
 });
 
@@ -53,16 +57,25 @@ app.get("/login", (req, res) => {
     res.render('login');
 })
 
-const createUser = `
+const getUser = `
 
-SELECT count(*)
+SELECT *
 FROM user
 WHERE username = ? and password = ?
 `
 
+const createUser = `
+INSERT INTO user (username, password)
+VALUES (?, ?) 
+`
+
 app.post("/login", (req, res) => {
-    db.execute(createUser, [req.body.username, req.body.password], (err, results) => {
+    db.execute(getUser, [req.body.username, req.body.password], (err, results) => {
         console.log(results);
-        res.redirect(`/picpage`);
+        if (results.length > 0){
+            console.log("account already exists")
+            res.redirect('/aeweb');
+        }
+        
     } );
 })
