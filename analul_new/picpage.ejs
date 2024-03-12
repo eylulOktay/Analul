@@ -28,36 +28,25 @@
     <div class="container center-align">
         <background-img src="aebackground.jpeg"></background-img>
         <h1 class="center-align lighten-2 ">US!</h1>
-        <img class="img" src="aepics/ae1.jpg"></img>
-        <img class="img" src="aepics/ae2.jpg"></img>
-        <img class="img" src="aepics/ae3.jpg"></img>
-        <img class="img" src="aepics/ae4.jpg"></img>
-        <img class="img" src="aepics/ae5.jpg"></img>
-        <img class="img" src="aepics/ae6.jpg"></img>
-        <img class="img" src="aepics/ae7.jpg"></img>
-        <img class="img" src="aepics/ae8.jpg"></img>
-        <img class="img" src="aepics/ae9.jpg"></img>
-        <img class="img" src="aepics/ae10.jpg"></img>
-        <img class="img" src="aepics/ae11.jpg"></img>
-        <img class="img" src="aepics/ae12.jpg"></img>
-        <img class="img" src="aepics/ae13.jpg"></img>
-        <img class="img" src="aepics/ae14.jpg"></img>
-        <img class="img" src="aepics/ae15.jpg"></img>
-        <img class="img" src="aepics/ae16.jpg"></img>
-        <img class="img" src="aepics/ae17.jpg"></img>
-        <img class="img" src="aepics/ae18.jpg"></img>
-        <img class="img" src="aepics/ae19.jpg"></img>
-        <img class="img" src="aepics/ae20.jpg"></img>
+        <!-- for loop looping through the output of the query with one image tag -->
+        <% for (let i = 0; i < 20; i++) { %>
+            <img class="img" src="<%=photoList[i].photo_url%>"></img>
+        
+        <% } %>
+        
 
         <br>
         <div class="comment">
-            <br>
+        <br>
+        <form>
             <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on our pics......"></textarea>
             <br>
             <br>
-            <input class = "post" type="submit" value="Post" onclick="insert()" style="width:100px;" /></form>
-            </div>
-            <div id="display">
+            <button method= "post" type="submit" value="Post" style="width:100px;"></button>
+        </form>
+            
+        </div> 
+        <div id="display">
 
         </div>
         
@@ -89,11 +78,11 @@
         
         <h1 class="center-align lighten-2 ">Anagha!</h1>
         <br>
-        <br>
-        <img class="img1" src="aepics/an1.jpg"></img>
-        <img class="img1" src="aepics/an2.jpg"></img>
-        <img class="img1" src="aepics/an3.jpg"></img>
-        <img class="img1" src="aepics/an4.jpg"></img>
+        <% for (let i = 20; i < 24; i++) { %>
+            <img class="img" src="<%=photoList[i].photo_url%>"></img>
+        
+        <% } %>
+    
         <br>
         <br>
         <div class="comment">
@@ -133,12 +122,12 @@
  
 
         <h1 class="center-align lighten-2">Eylul!</h1>
-        <img class="img1" src="aepics/e1.jpg"></img>
-        <img class="img1" src="aepics/e3.jpg"></img>
-        <img class="img1" src="aepics/e4.jpg"></img>
-        <img class="img1" src="aepics/e5.jpg"></img>   
-
-    <br>
+        <br>
+        <% for (let i = 24; i < 28; i++) { %>
+            <img class="img" src="<%=photoList[i].photo_url%>"></img>
+        
+        <% } %>
+    
     <div class="comment">
         <br>
         <textarea id="title2" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on Eylul's pics......"></textarea>

@@ -14,18 +14,34 @@ app.get("/", (req, res) => {
     res.render("aeweb");
 });
 
+const getAllPhotos = `SELECT * FROM photo`;
+
+//for comments you make another query and it will be post request
+
+
+
 app.get("/picpage", (req, res) => {
-    res.render("picpage");
-});
+    db.execute(getAllPhotos, (err, results) => {
+            let data = { photoList : results };
+            console.log(data);
+            res.render('picpage', data);
+    }
+)});
+
+const post_comment = `
+    INSERT INTO comments 
+        (comment) 
+    VALUES 
+        (?);
+`
+
+app.post("/picpage", (req, res) => {
+    db.execute(post_comment,[req.body.comment], (err, results) => {
+        res.redirect(`/picpage`);
+    }
+)});
 
 
-const comment_sql = `
-    SELECT photo_id, 
-    FROM photo
-    JOIN comment 
-    ON  
-        photo.photo_id = comment.photo_id
-`;
 
 // start the server
 app.listen( port, () => {
