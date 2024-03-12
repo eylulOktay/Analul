@@ -11,8 +11,13 @@ app.use(express.static(__dirname));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
+    res.render("aeweb");
+});
+
+app.get("/picpage", (req, res) => {
     res.render("picpage");
 });
+
 
 const comment_sql = `
     SELECT photo_id, 
