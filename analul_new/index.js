@@ -22,20 +22,6 @@ const comment_sql = `
         photo.photo_id = comment.photo_id
 `;
 
-app.get("/assignments/:id", (req, res) => {
-    db.execute(
-        comments_sql,
-        [req.params.id],
-        (error, results) => {
-            if (error) res.status(500).send(error);
-            else {
-                let data = { hw: results[0] };
-                res.render("detail", data);
-            }
-        }
-    );
-});
-
 // start the server
 app.listen( port, () => {
     console.log(`App server listening on ${ port }. (Go to http://localhost:${ port })` );
