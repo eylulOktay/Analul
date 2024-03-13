@@ -1,0 +1,72 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #fbc9d1;
+}
+
+form {
+    font-size: 25px;
+    transition-property: flex;
+    align-items: center;
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    background-position-x: center;
+    text-align: center;
+    background-position-y: center;
+    background-position: center;
+}
+
+.container {
+    background-color: #fff4f6;
+    transition-property: flex;
+    align-items: center;
+    border: 5px solid #fbc9d1;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 45px;
+    background-position-x: center;
+    background-position-y: center;
+    background-position: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-decoration: underline;
+    transition-property: flex;
+    align-items: center;
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    background-position-x: center;
+    position: center;
+    color:#fcb8c3;
+    text-align: center;
+    background-position-y: center;
+
+}
+
+#button {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #fae2ec;
+    width: 250px;
+    height: 100px;
+    color:#fcb8c3;
+    border: 5px solid #fcb8c3;
+    border-radius: 55px;
+    background-position-y: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+p {
+    color: #faa9b6;
+}
+
+.userinput {
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    border-color: #fcb8c3;
+    text-align: center;
+}
