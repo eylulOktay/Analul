@@ -106,3 +106,10 @@ body {
     border-radius: 15px;
     border-color: #f9b5c1d4;
   }
+
+  .textcomment {
+    border: 2px solid #c4d8c5c7; 
+    font-size: 25px;
+    color: #92a993;
+    text-decoration: 1px underline;
+  }

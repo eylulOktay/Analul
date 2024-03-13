@@ -38,15 +38,15 @@
         <br>
         <div class="comment">
         <br>
-        <form>
             <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="leave a comment on our pics......"></textarea>
             <br>
             <br>
-            <button method= "post" type="submit" value="Post"style="width:100px;"></button>
-        </form>
+            <input class = "post" type="submit" value="Post" onclick="insert()" style="width:100px;" /></form>
             
         </div> 
-        <div id="display">
+        <br>
+        <br>
+        <div class="textcomment" id="display">
 
         </div>
         
@@ -79,7 +79,7 @@
         <h1 class="center-align lighten-2 ">Anagha!</h1>
         <br>
         <% for (let i = 20; i < 24; i++) { %>
-            <img class="img" src="<%=photoList[i].photo_url%>"></img>
+            <img class="img1" src="<%=photoList[i].photo_url%>"></img>
         
         <% } %>
     
@@ -91,8 +91,9 @@
             <br>
             <br>
             <input class = "post" type="submit" value="Post" onclick="insert1()" style="width:100px;" /></form>
-
-            <div id="display1"></div>
+            <br>
+            <br>
+            <div class="textcomment" id="display1"></div>
         </div>
 
             <script type="text/javascript">
@@ -124,7 +125,7 @@
         <h1 class="center-align lighten-2">Eylul!</h1>
         <br>
         <% for (let i = 24; i < 28; i++) { %>
-            <img class="img" src="<%=photoList[i].photo_url%>"></img>
+            <img class="img1" src="<%=photoList[i].photo_url%>"></img>
         
         <% } %>
     
@@ -134,7 +135,9 @@
         <br>
         <br>
         <input class = "post" type="submit" value="Post" onclick="insert2()" style="width:100px;" /></form>
-        <div id="display2"></div>
+        <br>
+        <br>
+        <div class="textcomment" id="display2"></div>
         </div>
         <script type="text/javascript">
         var titles2 = [];
